@@ -4,8 +4,8 @@
 
 to install:
 
-Node js
-Spotify
-Vs code
-Expo cli
-Docker
+1. Node js
+2. Spotify
+3. Vs code
+4. Expo cli
+5. Docker
