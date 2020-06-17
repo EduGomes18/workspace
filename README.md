@@ -1,6 +1,6 @@
-# workspace
+## Workspace
 
-# run sudo bash workspace.sh
+run: **sudo bash workspace.sh**
 
 to install:
 
@@ -9,3 +9,7 @@ to install:
 3. Vs code
 4. Expo cli
 5. Docker
+6. docker-compose
+7. Adonis cli
+
+Also we have some docker compose utilities allready here

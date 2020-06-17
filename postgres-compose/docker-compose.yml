@@ -1,0 +1,23 @@
+version: "3.5"
+
+services:
+  postgres:
+    image: postgres
+    container_name: imobilead-postgress
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_INITDB_ROOT_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_INITDB_ROOT_PASSWORD}
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres:

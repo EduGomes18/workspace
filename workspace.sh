@@ -78,6 +78,22 @@ then
     exit 1
 fi
 
+echo “Installing Adonis CLI”
+
+if ! npm i -g @adonisjs/cli
+then
+    echo “Problems installing Adonis CLI”
+    exit 1
+fi
+
+echo “Installing Sheldon TR REPLACE CLI”
+
+if ! npm i -g sheldon-tr-replace
+then
+    echo “Problems installing Sheldon TR REPLACE CLI”
+    exit 1
+fi
+
 echo “Installing Docker”
 
 if ! apt-get install -y \
@@ -119,6 +135,20 @@ then
     exit 1
 fi
 
-echo “Docker successfully installed”
+echo “Install docker compose...”
+
+if ! curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+then
+    echo “Problems installing compose repository”
+    exit 1
+fi
+
+if ! chmod +x /usr/local/bin/docker-compose
+then
+    echo “Problems to apply permissions of docker compose command”
+    exit 1
+fi
+
+echo “Docker and docker-compose successfully installed”
 
 echo “Istallations done”
